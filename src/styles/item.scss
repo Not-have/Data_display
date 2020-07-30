@@ -1,0 +1,78 @@
+/**
+    * @name : 图表模块的背景
+    * @update: 2020-07-28    11：35
+    * @ autor: 李勇
+    * @example: 
+     <div class="panel">
+         <!--这个是图表模块，主要是包裹下面这个 -->
+         <div id="" style="height: ">
+            
+         </div>
+         <div class="panel-footer"></div>
+     </div>
+     
+     在css中引入（因为组件里引入，他就变成局部的了）
+     @import "@/styles/item.scss";
+*/
+.panel {
+    position: relative;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    background: rgba(255, 255, 255, 0.04) url("~@/assets/images/line.png");
+    padding: 0 0.02rem 0.1rem;
+    margin-bottom: 0.1875rem;
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid #02a6b5;
+        border-left: 2px solid #02a6b5;
+    }
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid #02a6b5;
+        border-right: 2px solid #02a6b5;
+    }
+    .panel-footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid #02a6b5;
+            border-left: 2px solid #02a6b5;
+        }
+        &::after {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid #02a6b5;
+            border-right: 2px solid #02a6b5;
+        }
+    }
+
+    h2 {
+        height: 0.4rem;
+        line-height: 0.5rem;
+        text-align: center;
+        color: #fff;
+        font-size: 0.25rem;
+        font-weight: 400;
+    }
+}
